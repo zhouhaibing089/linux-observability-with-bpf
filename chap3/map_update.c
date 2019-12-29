@@ -35,4 +35,15 @@ int main(int argc, char **argv) {
     printf("Failed to update map with new value: %d %s\n", result,
            strerror(errno));
   }
+
+  // and try to update an element which doesn't exist yet.
+  key = 1234;
+  value = 5678;
+  result = bpf_map_update_elem(fd, &key, &value, BPF_EXIST);
+  if (result == 0) {
+    printf("Map updated with new element\n");
+  } else {
+    printf("Failed to update map with new value: %d %s\n", result,
+           strerror(errno));
+  }
 }
