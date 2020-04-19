@@ -1,6 +1,0 @@
-*
-!*.c
-!map_crud.c
-!Makefile
-!README.md
-!.gitignore

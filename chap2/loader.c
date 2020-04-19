@@ -7,6 +7,9 @@ int main(int argc, char **argv) {
     return -1;
   }
 
+  // since we created a map in our bpf program, we can get its fd via map_data
+  printf("fd of my_map is: %d", map_data[0].fd);
+
   read_trace_pipe();
 
   return 0;
