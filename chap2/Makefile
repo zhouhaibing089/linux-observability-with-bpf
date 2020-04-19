@@ -32,3 +32,6 @@ loader: loader.c
 		-D HAVE_ATTR_TEST=0 \
 		${HOME}/workspace/linux-5.4.6/samples/bpf/bpf_load.c \
 		loader.c
+
+clean:
+	rm -f loader bpf_program.o
