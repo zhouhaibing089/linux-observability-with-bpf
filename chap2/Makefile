@@ -19,7 +19,7 @@
 # pacman -Sy lib32-glibc 
 bpf_program.o: bpf_program.c
 	clang -O2 -target bpf -c bpf_program.c \
-		-I${HOME}/workspace/linux-5.4.6/tools/testing/selftests/bpf \
+		-I${HOME}/workspace/linux-5.6.7/tools/lib/bpf \
 		-o bpf_program.o
 
 loader: loader.c
